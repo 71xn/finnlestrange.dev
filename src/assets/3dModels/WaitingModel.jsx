@@ -8,7 +8,7 @@ import { useGLTF, useAnimations } from '@react-three/drei'
 
 export function WaitingModel(props) {
   const group = useRef()
-  const { nodes, materials, animations } = useGLTF('/src/assets/3dModels/waiting.glb')
+  const { nodes, materials, animations } = useGLTF('./waiting.glb')
   const { actions } = useAnimations(animations, group)
 
   useEffect(() => {
@@ -35,4 +35,4 @@ export function WaitingModel(props) {
   )
 }
 
-useGLTF.preload('/src/assets/3dModels/waiting.glb')
+useGLTF.preload('./waiting.glb')
